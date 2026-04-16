@@ -1,0 +1,70 @@
+<html >
+<head>
+    <title>ANIMACIONES CSS - ANIMATION </title>
+    <style>
+        h1{
+            font-family: "century gothic"; /*Formato de texto*/
+            color:rgba(165, 42, 42, 0); /*Color */
+            text-align: center; /*Aliniacion */
+
+            animation-name: titulo; /*titulo de la animacion */
+            animation-duration: 3s; /*Duracion de la animacion */
+            animation-iteration-count: 1; /* cantidad veces que se repetira la animacion */
+            animation-fill-mode: forwards; /* indicas cual es el ultimo estado que se mantiene 
+            con forwards se queda con la animacion final (delante)
+            con backwards se queda con la animacion del princio (detras) */
+
+        }
+        @keyframes titulo{
+            from{color: rgba(165, 42, 42, 0);} /*inicio de la animacion*/
+            to{color: rgba(165, 42, 42, 1);} /*Fin de la animacion*/
+        }
+        p{
+            text-align: center;
+            font-family: "century gothic";
+            font-weight: bold;
+            
+            animation-name: texto;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: backwards;
+            animation-delay: 3s;
+        }
+        @keyframes texto{
+            from{
+                color:rgba(0,0,0,0);
+            }
+            to{
+                color:rgba(0,0,0,1);
+            }
+        }
+        img{
+            height: 200px;
+            width: 200px;
+            display: block; /* modo de mostrar el objeto*/
+            margin: auto; /* centrar la imagen */
+            opacity: 0;
+
+            animation: imagen 3s 6s 1 forwards;
+
+        }
+        @keyframes imagen{
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+    </style>    
+
+</head>
+<body>
+    <h1>PROMOCION 2026 - CI </h1>
+    <p>IESTP MANUEL SEOANE CORRALES</p>
+    <!-- <img src="logo.png"> Si la imagen se encutra en la misma carpeta que el index 
+    se puede llamar aasi, pero es una mala practica, lo adecuado es ponerlo dentro de una carpeta y 
+    llamarlo desde ahi -->
+    <img src="img/logo.png">
+</body>
+</html>
